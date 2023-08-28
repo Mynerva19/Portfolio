@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movable Box</title>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="movableBox"></div>
+
+    <script>
+        $(document).ready(function() {
+    // Variables to store the initial mouse position and box position
+    var box = document.createElement('div')
+    box.class = 'box'
+    box.id ='movableBox'
+    document.body.appendChild(box)
+    
+    var isDragging = false;
+    var initialX, initialY;
+    var boxOffsetX, boxOffsetY;
+    var movableBox = $("#movableBox");
+
+    // Function to start dragging
+    function startDragging(e) {
+        isDragging = true;
+        initialX = e.clientX;
+        initialY = e.clientY;
+        boxOffsetX = movableBox.offset().left;
+        boxOffsetY = movableBox.offset().top;
+    }
+
+    // Function to stop dragging
+    function stopDragging() {
+        isDragging = false;
+    }
+
+    // Function to move the box
+    function moveBox(e) {
+        if (isDragging) {
+            var dx = e.clientX - initialX;
+            var dy = e.clientY - initialY;
+            movableBox.css({
+                top: boxOffsetY + dy,
+                left: boxOffsetX + dx
+            });
+        }
+    }
+
+    // Event listeners for drag
+    movableBox.on("mousedown", startDragging);
+    $(document).on("mouseup", stopDragging);
+    $(document).on("mousemove", moveBox);
+});
+    </script>
+</body>
+</html>

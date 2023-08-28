@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
+@font-face {
+    font-family: 'nier';
+    src: url("ban.otf") format("opentype");
+}
+html,body {
+  
+  overflow-x: hidden;
+}
+body {
+    padding: 0;
+}
+
+.background {
+  top: 0;
+  z-index: -3;
+      width: 100%;
+      height: 1000px;
+      position: fixed;
+    background: -moz-linear-gradient(0deg, rgba(211,239,154,1) 32%, rgba(154,175,239,1) 55%);
+    background: -webkit-linear-gradient(0deg, rgba(211,239,154,1) 32%, rgba(154,175,239,1) 55%);
+    background: linear-gradient(0deg, rgba(211,239,154,1) 32%, rgba(154,175,239,1) 55%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d3ef9a",endColorstr="#9aafef",GradientType=1);
+    background-repeat: no-repeat;
+    background-size: cover; /* Add this line */
+}
+.nier {
+    
+    font-family: 'nier';
+}
+.typewriter {
+    white-space: pre;
+    overflow: hidden;
+    border-right: 2px solid;
+    font-size: 2em
+  }
+  
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+b {
+    font-family: 'Signika Negative', sans-serif;
+    
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+  }
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    position: fixed;
+    
+    z-index: -2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-gap: 20px;
+  }
+  .grid object {
+    width: 50px;
+    height: 50px;
+  }
+  .human {
+    position: relative;    
+    right: 0;
+
+  }
+  .top-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    border-radius: 100%;
+    font-weight: bolder;
+    position: fixed;
+    left: 95%;
+    top: 95%;
+    transform: translate(-100%,-100%);
+    border: 0;
+    transition: 2.5s;
+  }
+  #about_me {
+    transition: 1s;
+  }
+  .circle-wrap {
+    margin: 150px auto;
+    width: 150px;
+    height: 150px;
+    background: #fefcff;
+    border-radius: 50%;
+    border: 1px solid #cdcbd0;
+
+  }
+  .progress {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 30px;
+  }
+  .progress::-webkit-progress-bar {
+    background-color: white;
+    transition: 3s;
+  }
+  #progress_html::-webkit-progress-value {
+    background-color: #d74d4d;
+    transition: 3s;
+  }
+#progress_js::-webkit-progress-value {
+  background-color: #e5ff00;
+    transition: 3s;
+}
+#progress_css::-webkit-progress-value {
+  background-color: #3b5ad5;
+    transition: 3s;
+}
+#progress_other::-webkit-progress-value {
+  background-color: #453a3a;
+    transition: 3s;
+}
+.progressor label {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#progress_group {
+  transition: 2s;
+  position: relative;
+}
+.project_1 {
+  
+  position: relative;
+  left: 50%; /* Move the left edge of the image to the horizontal center */
+  transform: translate(-50%);
+}
+
+.discord-blockquote {
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 4px solid #6081f9; /* Discord blue color */
+  background-color: #d3e9ff; /* Discord's blockquote background color */
+  width: 80%;
+  position: relative;
+  left: 50%; /* Move the left edge of the image to the horizontal center */
+  transform: translate(-50%);
+}
+
+.discord-blockquote p {
+  margin: 0;
+}
+
+.discord-blockquote .blockquote-footer {
+  font-size: 1.5em;
+  color: #8e9297; /* Discord's light gray color */
+}
+.discord-blockquote .blockquote-footer {
+  font-size: 1em;
+  color: #8e9297; /* Discord's light gray color */
+}
+
+#pr_01:hover {
+  
+  transition: 1s;
+  opacity: 0.5;
+}
+
+.image-container {
+  
+  position: relative;
+  display: inline-block;
+}
+.image-container img {
+  width: 80%;
+  position: relative;
+  left: 50%; /* Move the left edge of the image to the horizontal center */
+  transform: translate(-50%);
+  
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.content-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.image-container:hover .content-text {
+  visibility: visible;
+  opacity: 1;
+}
+.image-container:hover img {
+  opacity: 0.5; /* Image opacity while hovering */
+}
+#proj {
+  position: relative;
+  transition: 1s;
+}
+
+.video_container{
+  
+  position: relative;
+  display: inline-block;
+}
+.video_container video {
+  width: 80%;
+  position: relative;
+  left: 50%; /* Move the left edge of the image to the horizontal center */
+  transform: translate(-50%);
+  
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#personal {
+  transition: 1s;
+  position: relative;
+}
+body{
+  background: #fff;
+}
+
+.timeline{
+  counter-reset: test 0;
+  position: relative;
+}
+
+.timeline li{
+  list-style: none;
+  float: left;
+  width: 33.3333%;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul:nth-child(1){
+  color: #4caf50;
+}
+
+.timeline li:before{
+  counter-increment: test;
+  content: counter(test);
+  width: 50px;
+  height: 50px;
+  border: 3px solid #4caf50;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto 10px auto;
+  background: #fff;
+  color: #000;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+}
+
+.timeline li:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  top: 25px;
+  left: -50%;
+  z-index: -999;
+  transition: all ease-in-out .3s;
+}
+
+.timeline li:first-child:after{
+  content: none;
+}
+.timeline li.active-tl{
+  color: #555555;
+}
+.timeline li.active-tl:before{
+  background: #4caf50;
+  color: #F1F1F1;
+}
+
+.timeline li.active-tl + li:after{
+  background: #4caf50;
+}
+#check_scroll{
+  overflow-y: hidden;
+  position: relative;
+  height: 100px;
+}
+#check_scroll .discord-blockquote {
+  
+  transition: 2s;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+}
